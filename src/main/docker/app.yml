@@ -1,0 +1,21 @@
+version: '2'
+services:
+    tlcrmspa-app:
+        image: tlcrmspa
+        external_links:
+            - tlcrmspa-mysql:mysql
+            - tlcrmspa-elasticsearch:elasticsearch
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/tlcrmspa?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
+        ports:
+            - 8080:8080
+    tlcrmspa-mysql:
+        extends:
+            file: mysql.yml
+            service: tlcrmspa-mysql
+    tlcrmspa-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: tlcrmspa-elasticsearch

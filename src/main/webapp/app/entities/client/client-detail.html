@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span>Client</span> {{vm.client.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span>Name</dt></dt>
+        <dd>
+            <span>{{vm.client.name}}<span>
+        </dd>
+        <hr>
+        <dt><span>Website</dt></dt>
+        <dd>
+            <span>{{vm.client.website}}<span>
+        </dd>
+        <hr>
+        <dt><span>Description</dt></dt>
+        <dd>
+            <span>{{vm.client.description}}<span>
+        </dd>
+        <hr>
+        <dt><span>CrmEntryType</dt></dt>
+        <dd>
+            <span>{{vm.client.crmEntryType}}<span>
+        </dd>
+        <hr>
+        <dt><span>IndustryType</dt></dt>
+        <dd>
+            <span>{{vm.client.industryType}}<span>
+        </dd>
+        <hr>
+        <dt><span>AccountManagerId</dt></dt>
+        <dd>
+            <span>{{vm.client.accountManagerId}}<span>
+        </dd>
+        <hr>
+        <dt><span>ExternalCode</dt></dt>
+        <dd>
+            <span>{{vm.client.externalCode}}<span>
+        </dd>
+        <hr>
+        <dt><span>tag</span></dt>
+        <dd>
+            <span ng-repeat="tag in vm.client.tags">
+                <a ui-sref="tag-detail({id: {{tag.id}}})">{{tag.name}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>
