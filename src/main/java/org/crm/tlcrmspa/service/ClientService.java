@@ -3,10 +3,12 @@ package org.crm.tlcrmspa.service;
 import org.crm.tlcrmspa.domain.Client;
 import org.crm.tlcrmspa.repository.ClientRepository;
 import org.crm.tlcrmspa.repository.search.ClientSearchRepository;
+import org.elasticsearch.index.query.QueryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.elasticsearch.core.query.SearchQuery;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -93,4 +95,11 @@ public class ClientService {
         log.debug("Request to search for a page of Clients for query {}", query);
         return clientSearchRepository.search(queryStringQuery(query), pageable);
     }
+    
+    @Transactional(readOnly = true)
+    public Page<Client> searchQuery(QueryBuilder queryBuilder, Pageable pageable) {
+        log.debug("Request to search for a page of Clients for query {}", queryBuilder);
+        return clientSearchRepository.search(queryBuilder, pageable);
+    }
+    
 }

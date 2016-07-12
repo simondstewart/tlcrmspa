@@ -1,0 +1,49 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "tag",
+            "otherEntityName": "tag",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "crmEntryType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "industryType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accountManagerId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "externalCode",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160422100501",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "client",
+    "pagination": "pagination"
+}
