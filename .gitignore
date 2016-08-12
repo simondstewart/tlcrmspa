@@ -1,2 +1,11 @@
+<<<<<<< HEAD
 /.apt_generated/
 /target/
+=======
+.project
+.classpath
+.settings/
+target/
+.svn/
+/.apt_generated/
+>>>>>>> branch 'master' of https://github.com/simondstewart/tlcrmspa

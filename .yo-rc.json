@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "jhipsterVersion": "3.0.0",
+    "baseName": "tlcrmspa",
+    "packageName": "org.crm.tlcrmspa",
+    "packageFolder": "org/crm/tlcrmspa",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "rememberMeKey": "41b3ea01a5553e44eed1db8387dd0eabda09934e",
+    "useSass": false,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": false
+  }
+}
