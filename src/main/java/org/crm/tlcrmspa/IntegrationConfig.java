@@ -11,7 +11,7 @@ import com.deltek.integration.trafficlive.service.TrafficLiveRestClient;
 public class IntegrationConfig {
 	
 	@Bean
-	private RestTemplate restTemplate() {
+	public RestTemplate restTemplate() {
 		TestRestTemplate basicAuthRestTemplate = new TestRestTemplate("simonstewart@deltek.com", "turK0QoPU5gkO6usNGfZcYcBpMEIaI0nUNLZQQSA");
 		return basicAuthRestTemplate;
 	}
